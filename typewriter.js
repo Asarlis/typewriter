@@ -1,19 +1,16 @@
-let sentence = "hello there from lighthouse labs";
-
-// sentence += "\n";
-
-let x = 500;
 const typeWriter = (input) => {
   input += "\n";
-for (const char of input) {
-  setTimeout(() => {
-    process.stdout.write(char)
+  let x = 500;
+    for (const char of input) {
+      setTimeout(() => {
+      process.stdout.write(char)
   }, x);
-  x += 100
-  
-}
+  x += 100  
+  }
 };
 
+typeWriter("Sean Rules")
 
-typeWriter(sentence)
-typeWriter("You are doing great Sean")
+module.exports = {
+  typeWriter,
+}
